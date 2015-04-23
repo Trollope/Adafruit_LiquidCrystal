@@ -22,22 +22,34 @@ void Adafruit_MCP23008::begin(uint8_t addr) {
   i2caddr = addr;
 
   Wire.begin();
-
+  delayMicroseconds(2);
   // set defaults!
   Wire.beginTransmission(MCP23008_ADDRESS | i2caddr);
+  delayMicroseconds(2);
   Wire.write((byte)MCP23008_IODIR);
+  delayMicroseconds(2);
   Wire.write((byte)0xFF);  // all inputs
+  delayMicroseconds(2);
   Wire.write((byte)0x00);
+  delayMicroseconds(2);
   Wire.write((byte)0x00);
+  delayMicroseconds(2);
   Wire.write((byte)0x00);
+  delayMicroseconds(2);
   Wire.write((byte)0x00);
+  delayMicroseconds(2);
   Wire.write((byte)0x00);
+  delayMicroseconds(2);
   Wire.write((byte)0x00);
+  delayMicroseconds(2);
   Wire.write((byte)0x00);
+  delayMicroseconds(2);
   Wire.write((byte)0x00);
+  delayMicroseconds(2);
   Wire.write((byte)0x00);	
+  delayMicroseconds(2);
   Wire.endTransmission();
-
+  delayMicroseconds(2);
 }
 
 void Adafruit_MCP23008::begin(void) {
@@ -125,17 +137,25 @@ uint8_t Adafruit_MCP23008::digitalRead(uint8_t p) {
 
 uint8_t Adafruit_MCP23008::read8(uint8_t addr) {
   Wire.beginTransmission(MCP23008_ADDRESS | i2caddr);
+  delayMicroseconds(2);
   Wire.write((byte)addr);	
+  delayMicroseconds(2);
   Wire.endTransmission();
+  delayMicroseconds(2);
   Wire.requestFrom(MCP23008_ADDRESS | i2caddr, 1);
-
+  delayMicroseconds(2);
+  
   return Wire.read();
 }
 
 
 void Adafruit_MCP23008::write8(uint8_t addr, uint8_t data) {
   Wire.beginTransmission(MCP23008_ADDRESS | i2caddr);
+  delayMicroseconds(2);
   Wire.write((byte)addr);
+  delayMicroseconds(2);
   Wire.write((byte)data);
+  delayMicroseconds(2);
   Wire.endTransmission();
+  delayMicroseconds(2);
 }
