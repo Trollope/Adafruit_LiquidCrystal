@@ -21,8 +21,8 @@ void Adafruit_MCP23008::begin(uint8_t addr) {
   }
   i2caddr = addr;
 
-  Wire.setSpeed(CLOCK_SPEED_100KHZ);
-  Wire.stretchClock(true);
+  //Wire.setSpeed(CLOCK_SPEED_100KHZ);
+  //Wire.stretchClock(true);
   Wire.begin();
   delayMicroseconds(2);
   // set defaults!
@@ -51,7 +51,7 @@ void Adafruit_MCP23008::begin(uint8_t addr) {
   Wire.write((byte)0x00);	
   delayMicroseconds(2);
   Wire.endTransmission();
-  delayMicroseconds(2);
+  delayMicroseconds(5);
 }
 
 void Adafruit_MCP23008::begin(void) {
@@ -143,7 +143,7 @@ uint8_t Adafruit_MCP23008::read8(uint8_t addr) {
   Wire.write((byte)addr);	
   delayMicroseconds(2);
   Wire.endTransmission();
-  delayMicroseconds(2);
+  delayMicroseconds(5);
   Wire.requestFrom(MCP23008_ADDRESS | i2caddr, 1);
   delayMicroseconds(2);
   
@@ -159,5 +159,5 @@ void Adafruit_MCP23008::write8(uint8_t addr, uint8_t data) {
   Wire.write((byte)data);
   delayMicroseconds(2);
   Wire.endTransmission();
-  delayMicroseconds(2);
+  delayMicroseconds(5);
 }
