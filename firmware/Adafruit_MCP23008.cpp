@@ -21,6 +21,8 @@ void Adafruit_MCP23008::begin(uint8_t addr) {
   }
   i2caddr = addr;
 
+  Wire.setSpeed(CLOCK_SPEED_100KHZ);
+  Wire.stretchClock(true);
   Wire.begin();
   delayMicroseconds(2);
   // set defaults!
