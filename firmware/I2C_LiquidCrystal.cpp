@@ -57,7 +57,7 @@ LiquidCrystal::LiquidCrystal(uint8_t i2caddr) {
   // the I/O expander pinout
   _rs_pin = 0;
   _rw_pin = 255;
-  _enable_pin = 2;
+  _enable_pin = 1;
   _data_pins[0] = 4;  // really d4
   _data_pins[1] = 5;  // really d5
   _data_pins[2] = 6;  // really d6
