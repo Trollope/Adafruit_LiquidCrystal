@@ -1,4 +1,4 @@
-#include "Adafruit_LiquidCrystal.h"
+#include "I2C_LiquidCrystal.h"
 
 #if !defined(_BV)
 #	define _BV(bit) (1 << (bit))
