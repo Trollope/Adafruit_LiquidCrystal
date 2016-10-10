@@ -23,8 +23,8 @@ void loop() {
   // print the number of seconds since reset:
   lcd.print(millis()/1000);
 
-  lcd.setBacklight(HIGH);
-  delay(500);
-  lcd.setBacklight(LOW);
-  delay(500);
+  //lcd.setBacklight(HIGH);
+  //delay(500);
+ // lcd.setBacklight(LOW);
+ // delay(500);
 }
