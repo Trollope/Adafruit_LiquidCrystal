@@ -7,11 +7,11 @@
 
 // TO connect via I2C. Data pin is D0, Clock is D1
 // By default, no jumpers are soldered, giving an address of 0.
-LiquidCrystal lcd(0);
+LiquidCrystal lcd(24);
 
 void setup() {
   // set up the LCD's number of rows and columns:
-  lcd.begin(20, 4);
+  lcd.begin(16, 2);
   // Print a message to the LCD.
   lcd.print("hello, world!");
 }
