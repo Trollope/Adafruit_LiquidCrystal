@@ -3,5 +3,5 @@
   "author": "Christian Vallières",
   "license": "BSD",
   "version": "1.0.2",
-  "description": "A fork altering tyhe pint out for a custom board"
+  "description": "A fork altering the pin out for a custom board"
 }
