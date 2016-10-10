@@ -3,7 +3,7 @@
   i2c / SPI character LCD backpack.
  ****************************************************/
 
-#include "Adafruit_LiquidCrystal/Adafruit_LiquidCrystal.h"
+#include "I2C_LiquidCrystal/I2C_LiquidCrystal.h"
 
 // TO connect via I2C. Data pin is D0, Clock is D1
 // By default, no jumpers are soldered, giving an address of 0.
