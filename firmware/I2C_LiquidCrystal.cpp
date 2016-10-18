@@ -355,7 +355,7 @@ void  LiquidCrystal::_digitalWrite(uint8_t p, uint8_t d) {
 void LiquidCrystal::setBacklight(uint8_t status) {
   // check if i2c or SPI
   if ((_i2cAddr != 255) || (_SPIclock != 255)) {
-    _digitalWrite(7, status); // backlight is on pin 7
+    _digitalWrite(3, status); // backlight is on pin 7
   }
 }
 
