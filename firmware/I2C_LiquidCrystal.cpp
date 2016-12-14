@@ -55,13 +55,13 @@ LiquidCrystal::LiquidCrystal(uint8_t i2caddr) {
   _displayfunction = LCD_4BITMODE | LCD_1LINE | LCD_5x8DOTS;
   
   // the I/O expander pinout
-  _rs_pin = 0;
+  _rs_pin = 1;
   _rw_pin = 255;
-  _enable_pin = 1;
-  _data_pins[0] = 4;  // really d4
-  _data_pins[1] = 5;  // really d5
-  _data_pins[2] = 6;  // really d6
-  _data_pins[3] = 7;  // really d7
+  _enable_pin = 3;
+  _data_pins[0] = 2;  // really d4
+  _data_pins[1] = 4;  // really d5
+  _data_pins[2] = 5;  // really d6
+  _data_pins[3] = 6;  // really d7
   
   // we can't begin() yet :(
 }
@@ -76,10 +76,10 @@ LiquidCrystal::LiquidCrystal(uint8_t data, uint8_t clock, uint8_t latch ) {
   _rs_pin = 0;
   _rw_pin = 255;
   _enable_pin = 1;
-  _data_pins[0] = 4;  // really d4
-  _data_pins[1] = 5;  // really d5
-  _data_pins[2] = 6;  // really d6
-  _data_pins[3] = 7;  // really d7
+  _data_pins[0] = 3;  // really d4
+  _data_pins[1] = 4;  // really d5
+  _data_pins[2] = 5;  // really d6
+  _data_pins[3] = 6;  // really d7
   
   _SPIdata = data;
   _SPIclock = clock;
